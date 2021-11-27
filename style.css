@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@200;300;400;500;600;700&family=Monoton&family=Raleway:ital,wght@0,200;0,300;0,500;0,800;1,400;1,600;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color:#777;
+}
+html,body{
+    margin:0;
+    padding:0;
+}
+
+
+/* ********* Navbar section ********* */
+
+.main-header{
+    background-color: rgba(0,0,0,0.6);
+    background-image: url("./images/bg-cover.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom:30px;
+}
+.nav ul{
+    margin: 0; 
+}
+.nav li{
+    display:inline;  
+}
+.nav a{
+    display: inline-block;
+    padding: 0.5em;
+    color:azure;
+    text-decoration:none; 
+    transition: letter-spacing 0.25s; 
+}
+.nav a:hover{
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    color:lightpink;
+}
+.main-nav{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid gainsboro;
+}
+.main-nav li {
+    padding: 0 2%;
+}
+.brand-name{
+    text-align: center;
+    font-family: 'Monoton', cursive;
+    margin: 0;
+    font-size: 1.5em;
+    color:violet;
+}
+.brand-name-large{
+    font-size: 8em;
+}
+@media screen and (max-width:788px) {
+    .brand-name{
+        font-size: 4em;
+    }
+}
+@media screen and (max-width:1040px) {
+    .brand-name{
+        font-size: 5em;
+    }
+}
+
+
+/* ********* About Content section ********* */
+
+.content-section {
+    margin: 1em;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.section-header{
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: 2em;
+    color:#333;
+    text-align: center;
+}
+.about-band-img{
+    float: left;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+
+/* ********* Footer section ********* */
+
+.main-footer{
+    background-color:#56ccf2;
+    color:whitesmoke;
+    padding: .25em 0;
+}
+.main-footer-container{
+    display: flex;
+    align-items: center;
+}
+.main-footer-container ul{
+    flex-grow: 1;
+    text-align:end;
+}
+.main-footer-container img{
+    height: 30px;
+    width: 30px;
+}
+.brand-footer{
+    color: black;
+}
+.footer-nav li{
+    padding: 0 0.5em;
+}
+@media screen and (max-width:788px) {
+    .brand-footer{
+        font-size: 4em;
+    }
+}
+@media screen and (max-width:1040px) {
+    .brand-footer{
+        font-size: 1.3em;
+    }
+}
+
+
+/* ********* Index Content section ********* */
+
+.btn{
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.67em;
+    cursor: pointer;
+}
+.btn-header{
+    margin: 0.5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #56ccf2;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 2em;
+    padding-right: 2em;
+    transition: background-color 1s;
+}
+.btn-header:hover{
+    background-color:rgba(255,255,255,0.5);
+}
+.btn-play{
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 1em;
+    color: #56ccf2;
+    animation-name: play;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite; 
+    animation-delay: 1s;
+}
+.btn-play:hover{
+    color: #56ccf2;
+    animation-name: play2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.tour-row {
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid rgb(56, 56, 56);
+    margin-bottom: 0.5em;
+}
+.tour-row:last-child{
+    border-bottom:1px solid rgba(56, 56, 56,0);
+}
+@keyframes play {
+    0%   {
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.2);
+    }
+    50%  {
+        box-shadow: 0px 0px 2px 9px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.2);}
+}
+@keyframes play2 {
+    0%   {
+        background-color: rgba(255, 255, 255, 0.2);}
+    50%  {
+        background-color: rgba(255, 255, 255, 0.5);}
+    100%   {
+        background-color: rgba(255, 255, 255, 0.2);}
+}
+.tour-item{
+    display: inline-block;
+    padding-right: 0.5em;
+}
+.tour-date{
+    color:#555;
+    font-weight: bold;
+    width:11%;
+}
+.tour-city{
+    width:24%;
+}
+.tour-arena{
+    width:42%;
+}
+.tour-btn{
+    max-width: 19%;
+    border-radius: 5px;
+}
+.btn-primary{
+    color:white;
+    background-color:#56ccf2;
+    border: 1px;
+    border-radius: 0.3em;
+    font-weight: bold;
+    transition:all 1s;
+}
+.btn-primary:hover{
+    color:#56ccf2;
+    background-color:white;
+    border:1px solid #56ccf2;
+    border-radius: 0.3em;
+    font-weight: bold;
+}
+
+/* ********* Store Content section ********* */
+/*
+shop-item-title
+shop-item-img
+shop-item-details
+shop-item-price
+shop-item-btn
+*/
+
+.shop-items{
+    text-align: center;
+}
+.shop-item{
+    display: inline-block;
+    padding:2em;
+}
+.shop-item-title{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+    padding:1em;
+}
+.shop-item-img{
+    display: block;
+    height: 200px;
+    width: 200px;
+}
+.shop-item-details{
+    display:flex;
+    padding-top: 1em;
+}
+.shop-item-price{
+    text-align:left;
+    padding-left: 1em;
+    flex-grow:1;
+}
+.shop-item-btn{
+    text-align:right;
+    padding-right: 1em; 
+}
